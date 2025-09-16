@@ -21,7 +21,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Leemos con FXMLLoader y a partir de ahi constuimos los objetos
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("App.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/App.fxml"));
         Parent root = loader.load();
 
         // Crea la escena desde el FXML.
