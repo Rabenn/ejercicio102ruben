@@ -24,7 +24,6 @@ public class App extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/App.fxml"));
 
         Parent root = loader.load();
-        System.out.println("Ha pasado por la excepcion de app.fxml");
 
         // Crea la escena desde el FXML.
         Scene scene = new Scene(root);
