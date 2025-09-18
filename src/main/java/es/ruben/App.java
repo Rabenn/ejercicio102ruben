@@ -5,6 +5,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -14,13 +16,19 @@ import java.io.IOException;
  */
 public class App extends Application {
 
+    private static final Logger logger = LoggerFactory.getLogger(App.class);
+
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
     public void start(Stage stage) throws IOException {
-        // Leemos con FXMLLoader y a partir de ahi constuimos los objetos
+
+
+        logger.info("Lanzador lanzado");
+
+        // Leemos con FXMLLoader y a partir de ahi construimos los objetos
         FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/App.fxml"));
 
         Parent root = loader.load();
