@@ -22,10 +22,13 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         // Leemos con FXMLLoader y a partir de ahi constuimos los objetos
         FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/App.fxml"));
+
         Parent root = loader.load();
+        System.out.println("Ha pasado por la excepcion de app.fxml");
 
         // Crea la escena desde el FXML.
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("css/styles.css").toExternalForm());
 
         // Muestra la ventana (Stage).
         stage.setTitle("FlowPane Alignment (desde FXML)");
