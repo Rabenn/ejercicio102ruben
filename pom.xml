@@ -5,9 +5,13 @@
     <groupId>es.ruben</groupId>
     <artifactId>ejercicio102ruben</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <!-- Modificacion del tipo de enpaquetado -->
+    <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Main que tienes que empaquetar-->
+        <mainClass>es.ruben.Lanzador</mainClass>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
@@ -60,7 +64,9 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>es.ruben.App</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>libs/</classpathPrefix>
+                            <mainClass>es.ruben.Lanzador</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
